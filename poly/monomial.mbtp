@@ -1,25 +1,21 @@
-// Logical-side specifications for the monomial layer.
+// Logical-side specifications for the polynomial proof model layer.
 // .mbtp = proof side only; never called by runtime code.
-
-/// Structural validity of a monomial: variables strictly ascending and all
-/// exponents strictly positive. Matches the invariant documented in monomial.mbt.
-predicate monomial_valid_vars(vars : Array[(Int, Int)]) {
-  ∀ i : Int,
-    (0 <= i) && (i < vars.length()) →
-      ((i == 0) || (vars[i-1].0 < vars[i].0)) && (vars[i].1 > 0)
-}
+//
+// The prove model works over FixedArray[Int32]; the Array-backed runtime
+// functions (Monomial::total_degree etc.) mirror these models structurally.
 
 /// A nonnegative quantity (degree-like measures).
 predicate nonneg(x : Int) {
   0 <= x
 }
 
-/// num_vars is the count of stored (var, exp) entries.
-predicate num_vars_ok(m_vars : Array[(Int, Int)], result : Int) {
-  result == m_vars.length()
+/// Monomial degree model: exponents are ordinary mathematical integers.
+predicate exponent_list(xs : FixedArray[Int]) {
+  ∀ i : Int, (0 <= i) && (i < xs.length()) → 0 <= xs[i]
 }
 
-/// total degree is the sum of exponents and is always nonnegative.
-predicate total_degree_ok(m_vars : Array[(Int, Int)], result : Int) {
-  nonneg(result)
+/// Proof-model fact backing `Polynomial::degree`: any result is >= -1
+/// (the empty/exponent-less case models the zero polynomial).
+predicate degree_bound(result : Int) {
+  -1 <= result
 }

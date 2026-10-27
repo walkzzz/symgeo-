@@ -7,6 +7,9 @@ import {
 }
 
 // Values
+pub fn max_exponent(FixedArray[Int32]) -> Int32
+
+pub fn sum_degrees(FixedArray[Int32]) -> Int32
 
 // Errors
 
