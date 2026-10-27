@@ -1,0 +1,4 @@
+import {
+  "looyiabc/symgeo/arithmetic" @arithmetic,
+  "moonbitlang/core/bigint" @bigint,
+}

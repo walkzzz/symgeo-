@@ -1,0 +1,5 @@
+import {
+  "looyiabc/symgeo/arithmetic" @arithmetic,
+}
+
+pkgtype(kind: "executable")
