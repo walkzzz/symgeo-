@@ -1,0 +1,4 @@
+import {
+  "looyiabc/symgeo/arithmetic" @arithmetic,
+  "looyiabc/symgeo/poly" @poly,
+}

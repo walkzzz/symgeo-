@@ -251,3 +251,11 @@ pub fn Monomial::to_string(self : Monomial) -> String {
     parts.join("*")
   }
 }
+///|
+pub impl Show for MonomialOrder with output(self, logger) {
+  let s = match self {
+    Lex => "Lex"
+    Grevlex => "Grevlex"
+  }
+  logger.write_string(s)
+}

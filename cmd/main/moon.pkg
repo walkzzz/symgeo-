@@ -1,5 +1,10 @@
 import {
   "looyiabc/symgeo/arithmetic" @arithmetic,
+  "looyiabc/symgeo/poly" @poly,
+  "looyiabc/symgeo/translate" @translate,
+  "looyiabc/symgeo/prover" @prover,
+  "looyiabc/symgeo/prover/groebner" @groebner,
+  "looyiabc/symgeo/theorems" @theorems,
 }
 
 pkgtype(kind: "executable")

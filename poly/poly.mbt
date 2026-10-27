@@ -209,31 +209,13 @@ pub fn Polynomial::mul(self : Polynomial, other : Polynomial) -> Polynomial {
   if self.is_zero() || other.is_zero() {
     return Polynomial::zero()
   }
-  // accumulate into a hash map keyed by monomial string-free equality via
-  // canonical list; MoonBit Map works on Eq+Hash keys, so wrap in small key.
-  let acc : Map[String, @arithmetic.Rational] = {}
-  let key_of : (Array[(Int, Int)]) -> String = fn(vars) {
-    let sb = StringBuilder::new()
-    for p in vars {
-      sb.write_string("\{p.0}:\{p.1};")
-    }
-    sb.to_string()
-  }
-  let varmap : Map[String, Array[(Int, Int)]] = {}
+  // Collect all pairwise products, then let normalize sort + merge equal
+  // monomials (summing coefficients, dropping zeros). No string keys.
+  let raw : Array[(Monomial, @arithmetic.Rational)] = []
   for ta in self.terms {
     for tb in other.terms {
-      let m = ta.0.mul(tb.0)
-      let k = key_of(m.exponents())
-      varmap[k] = m.exponents()
-      match acc.get(k) {
-        Some(v) => acc[k] = v.add(ta.1.mul(tb.1))
-        None => acc[k] = ta.1.mul(tb.1)
-      }
+      raw.push((ta.0.mul(tb.0), ta.1.mul(tb.1)))
     }
-  }
-  let raw : Array[(Monomial, @arithmetic.Rational)] = []
-  for k in acc.keys() {
-    raw.push((Monomial::make(varmap[k]), acc[k]))
   }
   normalize(raw)
 }

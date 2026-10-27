@@ -1,0 +1,4 @@
+import {
+  "looyiabc/symgeo/poly" @poly,
+  "looyiabc/symgeo/prover" @prover,
+}
