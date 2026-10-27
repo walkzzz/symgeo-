@@ -318,13 +318,21 @@ pub fn Polynomial::leading_coeff(self : Polynomial, order : MonomialOrder, nvars
 
 ///|
 /// Total degree (max over terms); zero polynomial has degree -1 by convention.
-pub fn Polynomial::degree(self : Polynomial) -> Int {
+/// Proved: result >= -1. Relies on the callee contract of total_degree (>= 0).
+pub fn Polynomial::degree(self : Polynomial) -> Int where {
+  proof_ensure: result => -1 <= result,
+} {
   let mut d = -1
-  for t in self.terms {
-    let td = t.0.total_degree()
+  for i = 0; i < self.terms.length(); {
+    let td = self.terms[i].0.total_degree()
     if td > d {
       d = td
     }
+    continue i + 1
+  } where {
+    proof_invariant: -1 <= d,
+    proof_invariant: 0 <= i,
+    proof_invariant: i <= self.terms.length(),
   }
   d
 }

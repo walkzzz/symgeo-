@@ -1,0 +1,25 @@
+// Logical-side specifications for the monomial layer.
+// .mbtp = proof side only; never called by runtime code.
+
+/// Structural validity of a monomial: variables strictly ascending and all
+/// exponents strictly positive. Matches the invariant documented in monomial.mbt.
+predicate monomial_valid_vars(vars : Array[(Int, Int)]) {
+  ∀ i : Int,
+    (0 <= i) && (i < vars.length()) →
+      ((i == 0) || (vars[i-1].0 < vars[i].0)) && (vars[i].1 > 0)
+}
+
+/// A nonnegative quantity (degree-like measures).
+predicate nonneg(x : Int) {
+  0 <= x
+}
+
+/// num_vars is the count of stored (var, exp) entries.
+predicate num_vars_ok(m_vars : Array[(Int, Int)], result : Int) {
+  result == m_vars.length()
+}
+
+/// total degree is the sum of exponents and is always nonnegative.
+predicate total_degree_ok(m_vars : Array[(Int, Int)], result : Int) {
+  nonneg(result)
+}

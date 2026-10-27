@@ -1,0 +1,645 @@
+{
+  "source_dir": "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo",
+  "name": "looyiabc/symgeo",
+  "packages": [
+    {
+      "is-main": false,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\arithmetic",
+      "root": "looyiabc/symgeo",
+      "rel": "arithmetic",
+      "files": {
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\arithmetic\\arith.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        },
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\arithmetic\\rational.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "wbtest-files": {},
+      "test-files": {
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\arithmetic\\rational_test.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "moonbitlang/core/bigint",
+          "alias": "bigint",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\bigint"
+        },
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\arithmetic\\arithmetic.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\arithmetic\\arith.mbt",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\arithmetic\\rational.mbt",
+        "-o",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\arithmetic\\arithmetic.mi",
+        "-pkg",
+        "looyiabc/symgeo/arithmetic",
+        "-pkg-type",
+        "library",
+        "-std-path",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle",
+        "-i",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle\\bigint\\bigint.mi:bigint",
+        "-i",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "looyiabc/symgeo/arithmetic:C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\arithmetic",
+        "-target",
+        "wasm",
+        "-workspace-path",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo",
+        "-all-pkgs",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\arithmetic\\rational_test.mbt",
+        "-doctest-only",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\arithmetic\\arith.mbt",
+        "-doctest-only",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\arithmetic\\rational.mbt",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\arithmetic\\arithmetic.blackbox_test.mi",
+        "-pkg",
+        "looyiabc/symgeo/arithmetic_blackbox_test",
+        "-pkg-type",
+        "library",
+        "-std-path",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle",
+        "-i",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\arithmetic\\arithmetic.mi:arithmetic",
+        "-i",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle\\bigint\\bigint.mi:bigint",
+        "-i",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "looyiabc/symgeo/arithmetic_blackbox_test:C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\arithmetic",
+        "-target",
+        "wasm",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo",
+        "-all-pkgs",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    },
+    {
+      "is-main": true,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\cmd\\main",
+      "root": "looyiabc/symgeo",
+      "rel": "cmd/main",
+      "files": {
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\cmd\\main\\main.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "wbtest-files": {},
+      "test-files": {},
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "looyiabc/symgeo/arithmetic",
+          "alias": "arithmetic",
+          "fspath": "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\arithmetic"
+        },
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\cmd\\main\\main.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\cmd\\main\\main.mbt",
+        "-o",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\cmd\\main\\main.mi",
+        "-pkg",
+        "looyiabc/symgeo/cmd/main",
+        "-pkg-type",
+        "executable",
+        "-std-path",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle",
+        "-i",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\arithmetic\\arithmetic.mi:arithmetic",
+        "-i",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "looyiabc/symgeo/cmd/main:C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\cmd\\main",
+        "-target",
+        "wasm",
+        "-workspace-path",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo",
+        "-all-pkgs",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "-doctest-only",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\cmd\\main\\main.mbt",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\cmd\\main\\main.blackbox_test.mi",
+        "-pkg",
+        "looyiabc/symgeo/cmd/main_blackbox_test",
+        "-pkg-type",
+        "library",
+        "-std-path",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle",
+        "-i",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\arithmetic\\arithmetic.mi:arithmetic",
+        "-i",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\cmd\\main\\main.mi:main",
+        "-i",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "looyiabc/symgeo/cmd/main_blackbox_test:C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\cmd\\main",
+        "-target",
+        "wasm",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo",
+        "-all-pkgs",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    },
+    {
+      "is-main": false,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\poly",
+      "root": "looyiabc/symgeo",
+      "rel": "poly",
+      "files": {
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\poly\\monomial.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        },
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\poly\\poly.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        },
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\poly\\monomial.mbtp": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "wbtest-files": {},
+      "test-files": {
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\poly\\poly_test.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "looyiabc/symgeo/arithmetic",
+          "alias": "arithmetic",
+          "fspath": "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\arithmetic"
+        },
+        {
+          "path": "moonbitlang/core/bigint",
+          "alias": "bigint",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\bigint"
+        },
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\poly\\poly.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\poly\\monomial.mbt",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\poly\\poly.mbt",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\poly\\monomial.mbtp",
+        "-o",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\poly\\poly.mi",
+        "-pkg",
+        "looyiabc/symgeo/poly",
+        "-pkg-type",
+        "library",
+        "-std-path",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle",
+        "-i",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\arithmetic\\arithmetic.mi:arithmetic",
+        "-i",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle\\bigint\\bigint.mi:bigint",
+        "-i",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "looyiabc/symgeo/poly:C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\poly",
+        "-target",
+        "wasm",
+        "-workspace-path",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo",
+        "-all-pkgs",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\poly\\poly_test.mbt",
+        "-doctest-only",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\poly\\monomial.mbt",
+        "-doctest-only",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\poly\\poly.mbt",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\poly\\poly.blackbox_test.mi",
+        "-pkg",
+        "looyiabc/symgeo/poly_blackbox_test",
+        "-pkg-type",
+        "library",
+        "-std-path",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle",
+        "-i",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\arithmetic\\arithmetic.mi:arithmetic",
+        "-i",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle\\bigint\\bigint.mi:bigint",
+        "-i",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\poly\\poly.mi:poly",
+        "-i",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "looyiabc/symgeo/poly_blackbox_test:C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\poly",
+        "-target",
+        "wasm",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo",
+        "-all-pkgs",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    },
+    {
+      "is-main": false,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\prover",
+      "root": "looyiabc/symgeo",
+      "rel": "prover",
+      "files": {},
+      "wbtest-files": {},
+      "test-files": {},
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\prover\\prover.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "-o",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\prover\\prover.mi",
+        "-pkg",
+        "looyiabc/symgeo/prover",
+        "-pkg-type",
+        "library",
+        "-std-path",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle",
+        "-i",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "looyiabc/symgeo/prover:C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\prover",
+        "-target",
+        "wasm",
+        "-workspace-path",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo",
+        "-all-pkgs",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\prover\\prover.blackbox_test.mi",
+        "-pkg",
+        "looyiabc/symgeo/prover_blackbox_test",
+        "-pkg-type",
+        "library",
+        "-std-path",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle",
+        "-i",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-i",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\prover\\prover.mi:prover",
+        "-pkg-sources",
+        "looyiabc/symgeo/prover_blackbox_test:C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\prover",
+        "-target",
+        "wasm",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo",
+        "-all-pkgs",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    },
+    {
+      "is-main": false,
+      "is-third-party": false,
+      "root-path": "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\translate",
+      "root": "looyiabc/symgeo",
+      "rel": "translate",
+      "files": {
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\translate\\translate.mbt": {
+          "backend": [
+            "Wasm",
+            "WasmGC",
+            "Js",
+            "Native",
+            "LLVM"
+          ],
+          "optlevel": [
+            "Release",
+            "Debug"
+          ]
+        }
+      },
+      "wbtest-files": {},
+      "test-files": {},
+      "mbt-md-files": {},
+      "deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "wbtest-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "test-deps": [
+        {
+          "path": "moonbitlang/core/prelude",
+          "alias": "prelude",
+          "fspath": "C:\\Users\\Administrator\\.moon\\lib\\core\\prelude"
+        }
+      ],
+      "artifact": "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\translate\\translate.mi",
+      "check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\translate\\translate.mbt",
+        "-o",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\translate\\translate.mi",
+        "-pkg",
+        "looyiabc/symgeo/translate",
+        "-pkg-type",
+        "library",
+        "-std-path",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle",
+        "-i",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-pkg-sources",
+        "looyiabc/symgeo/translate:C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\translate",
+        "-target",
+        "wasm",
+        "-workspace-path",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo",
+        "-all-pkgs",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\all_pkgs.json"
+      ],
+      "wbtest-check-command": null,
+      "test-check-command": [
+        "check",
+        "-error-format",
+        "json",
+        "-doctest-only",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\translate\\translate.mbt",
+        "-include-doctests",
+        "-o",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\translate\\translate.blackbox_test.mi",
+        "-pkg",
+        "looyiabc/symgeo/translate_blackbox_test",
+        "-pkg-type",
+        "library",
+        "-std-path",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle",
+        "-i",
+        "C:\\Users\\Administrator\\.moon\\lib\\core\\_build\\wasm\\release\\bundle\\prelude\\prelude.mi:prelude",
+        "-i",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\translate\\translate.mi:translate",
+        "-pkg-sources",
+        "looyiabc/symgeo/translate_blackbox_test:C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\translate",
+        "-target",
+        "wasm",
+        "-blackbox-test",
+        "-workspace-path",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo",
+        "-all-pkgs",
+        "C:\\Users\\Administrator\\WorkBuddy\\2026-10-27-12-01-25\\symgeo\\_build\\wasm\\debug\\check\\all_pkgs.json"
+      ],
+      "supported-targets": [
+        "Wasm",
+        "WasmGC",
+        "Js",
+        "Native",
+        "LLVM"
+      ]
+    }
+  ],
+  "deps": [],
+  "backend": "wasm",
+  "opt_level": "debug",
+  "source": null
+}

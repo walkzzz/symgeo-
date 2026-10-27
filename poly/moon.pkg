@@ -1,3 +1,5 @@
+proof_enabled = true
+
 import {
   "looyiabc/symgeo/arithmetic" @arithmetic,
   "moonbitlang/core/bigint" @bigint,

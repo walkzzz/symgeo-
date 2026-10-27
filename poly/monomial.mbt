@@ -127,18 +127,27 @@ pub fn Monomial::divides(self : Monomial, other : Monomial) -> Bool {
 }
 
 ///|
-/// Total degree = sum of exponents.
-pub fn Monomial::total_degree(self : Monomial) -> Int {
+/// Total degree = sum of exponents. Proved nonnegative via loop invariant.
+pub fn Monomial::total_degree(self : Monomial) -> Int where {
+  proof_ensure: result => total_degree_ok(self.vars, result),
+} {
   let mut d = 0
-  for p in self.vars {
-    d = d + p.1
+  for i = 0; i < self.vars.length(); {
+    d = d + self.vars[i].1
+    continue i + 1
+  } where {
+    proof_invariant: 0 <= i,
+    proof_invariant: i <= self.vars.length(),
+    proof_invariant: 0 <= d,
   }
   d
 }
 
 ///|
 /// Number of variables involved.
-pub fn Monomial::num_vars(self : Monomial) -> Int {
+pub fn Monomial::num_vars(self : Monomial) -> Int where {
+  proof_ensure: result => num_vars_ok(self.vars, result),
+} {
   self.vars.length()
 }
 
